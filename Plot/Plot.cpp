@@ -4,7 +4,7 @@ void Plot(double m, double c, std::string title, std::string data_file, std::str
     // Create gnuplot script
     std::ofstream scriptFile("Plot/plot_script.gp");
     scriptFile << "set terminal pngcairo\n";
-    scriptFile << "set output 'Plot/" << title << ".png'\n";
+    scriptFile << "set output 'Plot/Figures/" << title << ".png'\n";
     scriptFile << "set title '" << title << "'\n";
     scriptFile << "set xlabel '" << xlabel << "'\n";
     scriptFile << "set ylabel '" << ylabel << "'\n";
@@ -34,7 +34,7 @@ void Plot_Function(std::string title, std::string data_file, std::string functio
     // Create gnuplot script
     std::ofstream scriptFile("Plot/plot_script.gp");
     scriptFile << "set terminal pngcairo\n";
-    scriptFile << "set output 'Plot/" << title << ".png'\n";
+    scriptFile << "set output 'Plot/Figures/" << title << ".png'\n";
     scriptFile << "set title '" << title << "'\n";
     scriptFile << "set xlabel '" << xlabel << "'\n";
     scriptFile << "set ylabel '" << ylabel << "'\n";
@@ -72,7 +72,7 @@ void Scatter_Plot(std::vector<double> x, std::vector<double> y, std::string titl
     // Create gnuplot script
     std::ofstream scriptFile("Plot/plot_script.gp");
     scriptFile << "set terminal pngcairo\n";
-    scriptFile << "set output 'Plot/" << title << ".png'\n" ;
+    scriptFile << "set output 'Plot/Figures/" << title << ".png'\n" ;
     scriptFile << "set title '" << title << "'\n";
     scriptFile << "set xlabel '" << xlabel << "'\n";
     scriptFile << "set ylabel '" << ylabel << "'\n";
@@ -107,7 +107,7 @@ void Scatter_Plot_3D(const std::vector<double>& x, const std::vector<double>& y,
     // Create gnuplot script
     std::ofstream scriptFile("Plot/plot_script_3d.gp");
     scriptFile << "set terminal pngcairo size 800,600\n";
-    scriptFile << "set output 'Plot/" << title << ".png'\n";
+    scriptFile << "set output 'Plot/Figures/" << title << ".png'\n";
     scriptFile << "set title '" << title << "'\n";
     scriptFile << "set xlabel '" << xlabel << "'\n";
     scriptFile << "set ylabel '" << ylabel << "'\n";
